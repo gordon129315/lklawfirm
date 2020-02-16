@@ -3,6 +3,10 @@
     "version": "1.0.0",
     "description": "LK Law Firm",
     "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/gordon129315/lklawfirm.git"
+    },
     "scripts": {
         "start": "node src/app.js",
         "dev": "nodemon -e hbs,js,css src/app.js",

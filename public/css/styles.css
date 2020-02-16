@@ -9,8 +9,8 @@ body {
     flex-direction: column;
     /* font-family: "Microsoft YaHei", "微软雅黑", "MicrosoftJhengHei", "华文细黑", "STHeiti",
         "MingLiu", "SimSun", "宋体", Arial, "Times New Roman", Helvetica, sans-serif; */
-    font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑",
-        serif;
+    font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑",
+        STXihei, "华文细黑", serif;
     color: #333;
 }
 
@@ -35,16 +35,13 @@ span {
 }
 
 hr {
-    color: var(--main-color);
-    opacity: 0.8;
+    border-top: 1px solid var(--main-color);
     margin: 4% 40%;
 }
 
 hr.dotted {
-    border-top: dotted 0.5rem;
-    /* border-top-color: var(--main-color);
+    border-top: dotted 0.5rem var(--main-color);
     opacity: 0.8;
-    margin: 4% 40%; */
 }
 
 textarea {
@@ -69,7 +66,7 @@ a:hover {
 }
 
 .border-theme-color {
-    border-color: var(--main-color) !important;
+    border-color: var(--main-color);
 }
 
 .btn-outline-theme-color {
@@ -98,15 +95,9 @@ a:hover {
     box-shadow: 0 0 0 0 var(--main-color);
 }
 
-.dropdown-item:active {
-    color: #fff;
-    text-decoration: none;
-    background-color: var(--main-color);
-}
-
 .shadow:hover {
     box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2) !important;
-    background-color: #35446d08 !important;
+    background-color: #36466d08 !important;
 }
 
 /* navbar */
@@ -114,11 +105,20 @@ a:hover {
     font-size: 3rem;
     /* font-family: "Niconne", cursive; */
     font-family: "Playfair Display", serif;
-    /* letter-spacing: -0.1rem; */
 }
 
 .dropdown:hover > .dropdown-menu {
     display: block;
+}
+
+.dropdown-item {
+    color: var(--main-color);
+}
+
+.dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--main-color);
 }
 
 /* content */
@@ -152,6 +152,7 @@ a:hover {
     height: 3rem;
     border-radius: 50%;
     padding: 0;
+    z-index: 99;
 }
 
 /* contact */
