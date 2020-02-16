@@ -1,0 +1,162 @@
+:root {
+    --main-color: #36466d;
+    --hover-color: #17165f;
+}
+
+body {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    /* font-family: "Microsoft YaHei", "微软雅黑", "MicrosoftJhengHei", "华文细黑", "STHeiti",
+        "MingLiu", "SimSun", "宋体", Arial, "Times New Roman", Helvetica, sans-serif; */
+    font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑",
+        serif;
+    color: #333;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+span {
+    word-wrap: break-word;
+}
+
+p,
+span {
+    white-space: pre-wrap;
+}
+
+hr {
+    color: var(--main-color);
+    opacity: 0.8;
+    margin: 4% 40%;
+}
+
+hr.dotted {
+    border-top: dotted 0.5rem;
+    /* border-top-color: var(--main-color);
+    opacity: 0.8;
+    margin: 4% 40%; */
+}
+
+textarea {
+    resize: none;
+}
+
+a:hover {
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.trans {
+    background-color: #eeeeeebb;
+}
+
+.will-show {
+    display: none;
+}
+
+.theme-color {
+    color: var(--main-color);
+}
+
+.border-theme-color {
+    border-color: var(--main-color) !important;
+}
+
+.btn-outline-theme-color {
+    color: var(--main-color);
+    border-color: var(--main-color);
+    background-color: transparent;
+}
+
+.btn-outline-theme-color:hover {
+    color: #fff;
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+.btn-outline-theme-color:not(:disabled):not(.disabled):active {
+    color: #fff;
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+    box-shadow: 0 0 0 0.1rem var(--main-color) !important;
+}
+
+.btn-outline-theme-color:focus {
+    /* color: #fff;
+    background-color: var(--main-color);
+    border-color: var(--main-color); */
+    box-shadow: 0 0 0 0 var(--main-color);
+}
+
+.dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--main-color);
+}
+
+.shadow:hover {
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2) !important;
+    background-color: #35446d08 !important;
+}
+
+/* navbar */
+#navbar .navbar-brand span {
+    font-size: 3rem;
+    /* font-family: "Niconne", cursive; */
+    font-family: "Playfair Display", serif;
+    /* letter-spacing: -0.1rem; */
+}
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+/* content */
+.content {
+    flex: auto;
+}
+
+/* footer */
+#footer {
+    background-color: #cccccc;
+    flex-shrink: 0;
+}
+
+#footer i {
+    font-size: 1.1rem;
+}
+
+#footer .copyright span {
+    font-size: 1rem;
+    color: #505050;
+}
+
+/* back-to-top */
+#back-to-top {
+    position: fixed;
+    bottom: 1%;
+    float: right;
+    right: 1%;
+    font-size: 2rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    padding: 0;
+}
+
+/* contact */
+@media (max-width: 767.98px) {
+    div.map {
+        height: 60vw;
+    }
+}

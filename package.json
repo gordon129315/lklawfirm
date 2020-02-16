@@ -1,0 +1,23 @@
+{
+    "name": "lklawfirm",
+    "version": "1.0.0",
+    "description": "LK Law Firm",
+    "main": "index.js",
+    "scripts": {
+        "start": "node src/app.js",
+        "dev": "nodemon -e hbs,js,css src/app.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Gordon Yu",
+    "license": "ISC",
+    "dependencies": {
+        "cookie-parser": "^1.4.4",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "hbs": "^4.0.6",
+        "nodemailer": "^6.4.2"
+    },
+    "devDependencies": {
+        "nodemon": "^1.19.1"
+    }
+}
