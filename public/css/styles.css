@@ -9,8 +9,8 @@ body {
     flex-direction: column;
     /* font-family: "Microsoft YaHei", "微软雅黑", "MicrosoftJhengHei", "华文细黑", "STHeiti",
         "MingLiu", "SimSun", "宋体", Arial, "Times New Roman", Helvetica, sans-serif; */
-    font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑",
-        STXihei, "华文细黑", serif;
+    font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑",
+        serif;
     color: #333;
 }
 
@@ -29,10 +29,10 @@ span {
     word-wrap: break-word;
 }
 
-p,
+/* p,
 span {
     white-space: pre-wrap;
-}
+} */
 
 hr {
     border-top: 1px solid var(--main-color);
@@ -107,18 +107,20 @@ a:hover {
     font-family: "Playfair Display", serif;
 }
 
-.dropdown:hover > .dropdown-menu {
-    display: block;
-}
 
 .dropdown-item {
     color: var(--main-color);
 }
 
+.dropdown-item:hover {
+    color: #fff;
+    background-color: var(--main-color);
+}
+
 .dropdown-item:active {
     color: #fff;
     text-decoration: none;
-    background-color: var(--main-color);
+    background-color: var(--hover-color);
 }
 
 /* content */

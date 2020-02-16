@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,11 +17,13 @@
         "logo": "http://www.lklawfirm.ca/img/sz-logo-trans.png"
         }
     </script>
-    
+
     {{!-- bootstrap css --}}
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
-    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" />
+
     {{!-- google font --}}
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Niconne&display=swap" rel="stylesheet">
 
@@ -33,78 +36,89 @@
     {{!-- bootstrap js --}}
     {{!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
 
-    <meta name="keywords" content="LK Law Firm"/>
-	<meta name="description" content=""/>
-	
+    <meta name="keywords" content="LK Law Firm" />
+    <meta name="description" content="" />
+
 </head>
+
 <body>
 
+    {{!-- navbar --}}
+    <div id="navbar">
+        <nav class="navbar navbar-expand-lg navbar-light flex-column flex-lg-row">
+            {{!-- 中屏以上显示 --}}
+            <div class="d-none d-md-block">
+                <a class="navbar-brand font-weight-normal mx-0" href="/">
+                    <img src="/img/icon.png" height="70" width="80" class="d-inline-block align-top" alt="">
+                    <span class="theme-color">LK LAW FIRM</span>
+                </a>
+            </div>
+            <div class="d-none d-md-block">
+                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            {{!-- 小屏显示 --}}
+            <div class="d-block d-md-none text-center mx-auto">
+                <a class="navbar-brand font-weight-normal mx-0" href="/">
+                    <img src="/img/icon.png" height="70" width="80" class="d-inline-block align-top" alt="">
+                    <span class="theme-color d-block">LK LAW FIRM</span>
+                </a>
+            </div>
+            <div class="d-block d-md-none text-center mx-auto">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
 
-{{!-- navbar --}}
-<div id="navbar">
-    <nav class="navbar navbar-expand-lg navbar-light align-middle flex-column flex-md-row">
-        <div class="d-none d-md-block">
-            <a class="navbar-brand font-weight-normal mx-0" href="/">
-                <img src="/img/icon.png" height="70" width="80" class="d-inline-block align-top" alt="">
-                <span class="theme-color">LK LAW FIRM</span>
-            </a>
-        </div>
-        <div class="d-none d-md-block">
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-        <div class="d-block d-md-none text-center mx-auto">
-            <a class="navbar-brand font-weight-normal mx-0" href="/">
-                <img src="/img/icon.png" height="70" width="80" class="d-inline-block align-top" alt="">
-                <span class="theme-color d-block">LK LAW FIRM</span>
-            </a>
-        </div>
-        <div class="d-block d-md-none text-center mx-auto">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
+            <div class="collapse navbar-collapse justify-content-lg-end" id="navbarNav">
+                <ul class="navbar-nav d-inline-block d-lg-flex">
+                    {{!-- <ul class="navbar-nav d-block d-lg-flex"> --}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">ABOUT</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            SERVICES
+                        </a>
+                        <div class="dropdown-menu theme-color" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">房屋买卖</a>
+                            <a class="dropdown-item" href="#">生意转让</a>
+                            <a class="dropdown-item" href="#">公司法务</a>
+                            <a class="dropdown-item" href="#">商业投资</a>
+                            <a class="dropdown-item" href="#">留学移民</a>
+                            <a class="dropdown-item" href="#">遗嘱授权</a>
+                            <a class="dropdown-item" href="#">人身意外伤害</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/questions">Q&AMP;A</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">CONTACT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="?lang=zh">EN/中</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav d-inline-block d-lg-flex">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">HOME</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/about">ABOUT</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    SERVICES
-                    </a>
-                    <div class="dropdown-menu theme-color" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">房屋买卖</a>
-                        <a class="dropdown-item" href="#">生意转让</a>
-                        <a class="dropdown-item" href="#">公司法务</a>
-                        <a class="dropdown-item" href="#">商业投资</a>
-                        <a class="dropdown-item" href="#">留学移民</a>
-                        <a class="dropdown-item" href="#">遗嘱授权</a>
-                        <a class="dropdown-item" href="#">人身意外伤害</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/questions">Q&AMP;A</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/contact">CONTACT</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="?lang=zh">EN/中</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</div>
-
-<div class="content">
+    <div class="content">
