@@ -1,0 +1,20 @@
+{
+    "home": "HOME",
+    "about": "ABOUT",
+    "downloads": "DOWNLOADS",
+    "questions": "Q&A",
+    "contact": "CONTACT",
+    "wechat": "WeChat",
+    "email-us": "Email Us",
+    "message-box": {
+        "option-1": "Option 1: Send by Email",
+        "send-to": "Please send email to: ",
+        "reply": "We will reply withnin 2 business days.",
+        "option-2": "Option 2: Use Message Box",
+        "sender-name": "Your Name",
+        "sender-email": "Your Email",
+        "email-subject": "Subject",
+        "email-content": "Please input your message",
+        "send": "SEND"
+    }
+}

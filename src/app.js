@@ -4,7 +4,7 @@ const nodeMailer = require("nodemailer");
 const fs = require("fs");
 const cookieParser = require("cookie-parser");
 const fileService = require("./util/fileService");
-const events = require("./router/events");
+// const events = require("./router/events");
 const hbs = require("./util/handlebars");
 require("dotenv").config();
 
@@ -42,41 +42,51 @@ app.use("", (req, res, next) => {
         res.cookie("lang", "zh", { maxAge: 86400000, httpOnly: true });
         req.lang = "zh";
     }
+
+    req.headerContent = JSON.parse(
+        fs.readFileSync(path.join(__dirname, "../data", req.lang, "header.json"), "utf8")
+    );
+    req.footerContent = JSON.parse(
+        fs.readFileSync(path.join(__dirname, "../data", req.lang, "footer.json"), "utf8")
+    );
+
     next();
 });
 
 // router
-app.use("/events", events);
+// app.use("/events", events);
 
 app.get("", (req, res) => {
     const headline_news = JSON.parse(
-        fs.readFileSync(path.join(__dirname, "../data/headline-news.json"), "utf8")
+        fs.readFileSync(path.join(__dirname, "../data", req.lang, "headline-news.json"), "utf8")
     );
-    res.render("index", { headline_news });
+    res.render("index", { headline_news, header: req.headerContent, footer: req.footerContent });
 });
 
 app.get("/about", (req, res) => {
-    const about = JSON.parse(fs.readFileSync(path.join(__dirname, "../data/about.json"), "utf8"));
-    res.render("about", about);
+    const about = JSON.parse(
+        fs.readFileSync(path.join(__dirname, "../data", req.lang, "about.json"), "utf8")
+    );
+    res.render("about", {about, header: req.headerContent, footer: req.footerContent});
 });
 
 app.get("/questions", (req, res) => {
     const questions = JSON.parse(
-        fs.readFileSync(path.join(__dirname, "../data/questions.json"), "utf8")
+        fs.readFileSync(path.join(__dirname, "../data", req.lang, "questions.json"), "utf8")
     );
-    res.render("questions", { questions });
+    res.render("questions", { questions, header: req.headerContent, footer: req.footerContent });
 });
 
 app.get("/contact", (req, res) => {
     const contact = JSON.parse(
-        fs.readFileSync(path.join(__dirname, "../data/contact.json"), "utf8")
+        fs.readFileSync(path.join(__dirname, "../data", req.lang, "contact.json"), "utf8")
     );
-    res.render("contact", contact);
+    res.render("contact", {contact, header: req.headerContent, footer: req.footerContent});
 });
 
 app.get("/downloads", (req, res) => {
     const downloads = JSON.parse(
-        fs.readFileSync(path.join(__dirname, "../data/downloads.json"), "utf8")
+        fs.readFileSync(path.join(__dirname, "../data", req.lang, "downloads.json"), "utf8")
     );
     let files = [];
     const dir = path.join(__dirname, "../public/files/downloads");
@@ -85,7 +95,7 @@ app.get("/downloads", (req, res) => {
         // .filter((f) => f.file_name.endsWith(".pdf"))
         .sort((f1, f2) => f1.create_time < f2.create_time);
 
-    res.render("downloads", { downloads, files });
+    res.render("downloads", { downloads, files, header: req.headerContent, footer: req.footerContent });
 });
 
 // must put at last one

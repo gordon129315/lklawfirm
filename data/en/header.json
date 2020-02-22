@@ -1,0 +1,18 @@
+{
+    "home": "HOME",
+    "about": "ABOUT",
+    "services": {
+        "name": "SERVICES",
+        "dropdown": [
+            { "item": "房屋买卖", "url": "#" },
+            { "item": "生意转让", "url": "#" },
+            { "item": "公司法务", "url": "#" },
+            { "item": "商业投资", "url": "#" },
+            { "item": "留学移民", "url": "#" },
+            { "item": "遗嘱授权", "url": "#" },
+            { "item": "人身意外伤害", "url": "#" }
+        ]
+    },
+    "questions": "Q&A",
+    "contact": "CONTACT"
+}

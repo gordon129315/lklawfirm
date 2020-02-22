@@ -38,12 +38,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
 
     <meta name="keywords" content="LK Law Firm" />
@@ -87,34 +83,32 @@
                 <ul class="navbar-nav d-inline-block d-lg-flex">
                     {{!-- <ul class="navbar-nav d-block d-lg-flex"> --}}
                     <li class="nav-item">
-                        <a class="nav-link" href="/">HOME</a>
+                        <a class="nav-link" href="/">{{header.home}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about">ABOUT</a>
+                        <a class="nav-link" href="/about">{{header.about}}</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            SERVICES
+                            {{header.services.name}}
                         </a>
                         <div class="dropdown-menu theme-color" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">房屋买卖</a>
-                            <a class="dropdown-item" href="#">生意转让</a>
-                            <a class="dropdown-item" href="#">公司法务</a>
-                            <a class="dropdown-item" href="#">商业投资</a>
-                            <a class="dropdown-item" href="#">留学移民</a>
-                            <a class="dropdown-item" href="#">遗嘱授权</a>
-                            <a class="dropdown-item" href="#">人身意外伤害</a>
+                            {{# header.services.dropdown}}
+                            <a class="dropdown-item" href="{{url}}">{{item}}</a>
+                            {{/ header.services.dropdown}}
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/questions">Q&AMP;A</a>
+                        <a class="nav-link" href="/questions">{{header.questions}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/contact">CONTACT</a>
+                        <a class="nav-link" href="/contact">{{header.contact}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="?lang=zh">EN/中</a>
+                        <a class="nav-link d-inline-block pr-0" href="?lang=en">EN</a>
+                        <span class="nav-link d-inline-block px-0">/</span>
+                        <a class="nav-link d-inline-block pl-0" href="?lang=zh">中</a>
                     </li>
                 </ul>
             </div>
