@@ -3,7 +3,6 @@ const express = require("express");
 const nodeMailer = require("nodemailer");
 const cookieParser = require("cookie-parser");
 const fileService = require("./util/fileService");
-// const events = require("./router/events");
 const hbs = require("./util/handlebars");
 require("dotenv").config();
 
@@ -56,9 +55,6 @@ app.use("", (req, res, next) => {
 
     next();
 });
-
-// router
-// app.use("/events", events);
 
 app.get("", (req, res) => {
     const { header, footer, about, contact, headline_news } = req.webContent;
