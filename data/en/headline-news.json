@@ -1,1 +1,17 @@
-[]
+[
+    {
+        "title": "First slide label",
+        "content": "Nulla vitae elit libero, a pharetra augue mollis interdum.",
+        "img_url": "https://fakeimg.pl/1600x600/?text="
+    },
+    {
+        "title": "Second slide label",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "img_url": "https://fakeimg.pl/1600x600/?text="
+    },
+    {
+        "title": "Third slide label",
+        "content": "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
+        "img_url": "https://fakeimg.pl/1600x600/?text="
+    }
+]

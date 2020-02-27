@@ -1,1 +1,56 @@
-{}
+{
+    "headline": [{ "text": "迤逦加国，以法护航" }, { "text": "立足华社，助君凯旋" }],
+    "about": {
+        "title": "ABOUT US",
+        "content": [
+            {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat. Non sodales neque sodales ut etiam. Ultrices mi tempus imperdiet nulla malesuada. Facilisis gravida neque convallis a cras semper auctor. Vivamus arcu felis bibendum ut tristique et egestas quis. Ac turpis egestas sed tempus urna et pharetra. Lorem dolor sed viverra ipsum. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Cursus vitae congue mauris rhoncus aenean vel."
+            },
+            {
+                "text": "consectetur adipiscing elit, Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat. Non sodales neque sodales ut etiam. Ultrices mi tempus imperdiet nulla malesuada. Facilisis gravida neque convallis a cras semper auctor. Vivamus arcu felis bibendum ut tristique et egestas quis. Ac turpis egestas sed tempus urna et pharetra. Lorem dolor sed viverra ipsum. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Cursus aenean vel vitae congue mauris rhoncus."
+            },
+            {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor vitae congue mauris rhoncus aenean vel. ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat. Non sodales neque sodales ut etiam. Ultrices mi tempus imperdiet nulla malesuada. Facilisis gravida neque convallis a cras semper auctor. Vivamus arcu felis bibendum ut tristique et egestas quis. Ac turpis egestas sed tempus urna et pharetra. Lorem dolor sed viverra ipsum. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl."
+            },
+            {
+                "text": "Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat. Non sodales neque sodales ut etiam. Ultrices mi tempus imperdiet nulla malesuada. Facilisis gravida neque convallis a cras semper auctor. Vivamus arcu felis bibendum ut tristique et egestas quis. Ac turpis egestas sed tempus urna et pharetra. Lorem dolor sed viverra ipsum. Neque laoreet suspendisse interdum consectetur libero id faucibus nisll."
+            }
+        ]
+    },
+    "gallery": {
+        "title": "GALLERY",
+        "content": [
+            {
+                "id": "pic-id1",
+                "url": "https://fakeimg.pl/900x600/?text=",
+                "discription":""
+            },
+            {
+                "id": "pic-id2",
+                "url": "https://fakeimg.pl/900x600/?text=",
+                "discription":""
+            },
+            {
+                "id": "pic-id3",
+                "url": "https://fakeimg.pl/900x600/?text=",
+                "discription":""
+            },
+            {
+                "id": "pic-id4",
+                "url": "https://fakeimg.pl/900x600/?text=",
+                "discription":""
+            },
+            {
+                "id": "pic-id5",
+                "url": "https://fakeimg.pl/900x600/?text=",
+                "discription":""
+            },
+            {
+                "id": "pic-id6",
+                "url": "https://fakeimg.pl/900x600/?text=",
+                "discription":""
+            }
+            
+        ]
+    }
+}

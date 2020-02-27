@@ -1,7 +1,6 @@
 const path = require("path");
 const express = require("express");
 const nodeMailer = require("nodemailer");
-const fs = require("fs");
 const cookieParser = require("cookie-parser");
 const fileService = require("./util/fileService");
 // const events = require("./router/events");
@@ -38,17 +37,22 @@ app.use("", (req, res, next) => {
         req.lang = "zh";
     } else if (req.cookies["lang"]) {
         req.lang = req.cookies["lang"];
-    } else {
-        res.cookie("lang", "zh", { maxAge: 86400000, httpOnly: true });
+    } else if (req.headers["accept-language"].startsWith("zh")) {
         req.lang = "zh";
+    } else {
+        // res.cookie("lang", "en", { maxAge: 86400000, httpOnly: true });
+        req.lang = "en";
     }
 
-    req.headerContent = JSON.parse(
-        fs.readFileSync(path.join(__dirname, "../data", req.lang, "header.json"), "utf8")
-    );
-    req.footerContent = JSON.parse(
-        fs.readFileSync(path.join(__dirname, "../data", req.lang, "footer.json"), "utf8")
-    );
+    req.webContent = {
+        header: fileService.parseFile(req.lang, "header.json"),
+        footer: fileService.parseFile(req.lang, "footer.json"),
+        about: fileService.parseFile(req.lang, "about.json"),
+        contact: fileService.parseFile(req.lang, "contact.json"),
+        questions: fileService.parseFile(req.lang, "questions.json"),
+        headline_news: fileService.parseFile(req.lang, "headline-news.json"),
+        downloads: fileService.parseFile(req.lang, "downloads.json")
+    };
 
     next();
 });
@@ -57,37 +61,28 @@ app.use("", (req, res, next) => {
 // app.use("/events", events);
 
 app.get("", (req, res) => {
-    const headline_news = JSON.parse(
-        fs.readFileSync(path.join(__dirname, "../data", req.lang, "headline-news.json"), "utf8")
-    );
-    res.render("index", { headline_news, header: req.headerContent, footer: req.footerContent });
+    const { header, footer, about, contact, headline_news } = req.webContent;
+    res.render("index", { header, footer, about, contact, headline_news });
 });
 
 app.get("/about", (req, res) => {
-    const about = JSON.parse(
-        fs.readFileSync(path.join(__dirname, "../data", req.lang, "about.json"), "utf8")
-    );
-    res.render("about", {about, header: req.headerContent, footer: req.footerContent});
+    const { header, footer, about } = req.webContent;
+    res.render("about", { header, footer, about });
 });
 
 app.get("/questions", (req, res) => {
-    const questions = JSON.parse(
-        fs.readFileSync(path.join(__dirname, "../data", req.lang, "questions.json"), "utf8")
-    );
-    res.render("questions", { questions, header: req.headerContent, footer: req.footerContent });
+    const { header, footer, questions } = req.webContent;
+    res.render("questions", { header, footer, questions });
 });
 
 app.get("/contact", (req, res) => {
-    const contact = JSON.parse(
-        fs.readFileSync(path.join(__dirname, "../data", req.lang, "contact.json"), "utf8")
-    );
-    res.render("contact", {contact, header: req.headerContent, footer: req.footerContent});
+    const { header, footer, contact } = req.webContent;
+    res.render("contact", { header, footer, contact });
 });
 
 app.get("/downloads", (req, res) => {
-    const downloads = JSON.parse(
-        fs.readFileSync(path.join(__dirname, "../data", req.lang, "downloads.json"), "utf8")
-    );
+    const { header, footer, downloads } = req.webContent;
+
     let files = [];
     const dir = path.join(__dirname, "../public/files/downloads");
     fileService.walkDir(dir, files);
@@ -95,12 +90,13 @@ app.get("/downloads", (req, res) => {
         // .filter((f) => f.file_name.endsWith(".pdf"))
         .sort((f1, f2) => f1.create_time < f2.create_time);
 
-    res.render("downloads", { downloads, files, header: req.headerContent, footer: req.footerContent });
+    res.render("downloads", { header, footer, downloads, files });
 });
 
 // must put at last one
 app.get("*", (req, res) => {
-    res.status(404).render("404");
+    const { header, footer } = req.webContent;
+    res.status(404).render("404", { header, footer });
 });
 
 app.post("/send-email", (req, res) => {

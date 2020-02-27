@@ -5,6 +5,10 @@ const getEmptyContent = () => {
     return {};
 };
 
+const parseFile = (lang, fileNmae) => {
+    return JSON.parse(fs.readFileSync(path.join(__dirname, "../../data", lang, fileNmae), "utf8"));
+};
+
 const walkDir = (dir, files) => {
     walkDir_exec(dir, dir, files);
 };
@@ -31,6 +35,7 @@ const deleteFile = (file_path) => {
 
 module.exports = {
     getEmptyContent,
+    parseFile,
     walkDir,
     deleteFile
 };

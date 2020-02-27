@@ -4,8 +4,7 @@
 <div id="footer">
     <div class="container-fluid">
         <nav class="navbar navbar-expand-md navbar-light">
-            <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#footerNavbarNav"
-                aria-controls="footerNavbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#footerNavbarNav" aria-controls="footerNavbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="footerNavbarNav">
@@ -53,8 +52,7 @@
         </div>
 
         {{!-- modal --}}
-        <div class="modal fade" id="wechatModal" tabindex="-1" role="dialog" aria-labelledby="wechatModalLabel"
-            aria-hidden="true">
+        <div class="modal fade" id="wechatModal" tabindex="-1" role="dialog" aria-labelledby="wechatModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-sm" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -70,8 +68,7 @@
             </div>
         </div>
 
-        <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="emailModalLabel"
-            aria-hidden="true">
+        <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="emailModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-md" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -83,8 +80,7 @@
                     <div class="modal-body">
                         <div>
                             <h3>{{footer.message-box.option-1}}</h3>
-                            <p>{{footer.message-box.send-to}}<a
-                                    href="mailto:xunmei@lklawfirm.ca">xunmei@lklawfirm.ca</a></p>
+                            <p>{{footer.message-box.send-to}}<a href="mailto:xunmei@lklawfirm.ca">xunmei@lklawfirm.ca</a></p>
                             <p>{{footer.message-box.reply}}</p>
                         </div>
 
@@ -95,30 +91,23 @@
                             <form>
                                 <div class="form-group my-1">
                                     <label for="message-name" hidden>Your Name</label>
-                                    <input type="text" class="form-control border-theme-color" name="name"
-                                        id="message-name" placeholder="*{{footer.message-box.sender-name}}" required>
+                                    <input type="text" class="form-control border-theme-color" name="name" id="message-name" placeholder="*{{footer.message-box.sender-name}}" required>
                                 </div>
                                 <div class="form-group my-1">
                                     <label for="message-email" hidden>Your Email</label>
-                                    <input type="email" class="form-control border-theme-color" name="email"
-                                        id="message-email"
-                                        placeholder="*{{footer.message-box.sender-email}}: name@example.com" required>
+                                    <input type="email" class="form-control border-theme-color" name="email" id="message-email" placeholder="*{{footer.message-box.sender-email}}: name@example.com" required>
                                 </div>
                                 <div class="form-group my-1">
                                     <label for="message-subject" hidden>Subject</label>
-                                    <input type="text" class="form-control border-theme-color" name="subject"
-                                        id="message-subject" placeholder="{{footer.message-box.email-subject}}">
+                                    <input type="text" class="form-control border-theme-color" name="subject" id="message-subject" placeholder="{{footer.message-box.email-subject}}">
                                 </div>
                                 <div class="form-group my-1">
                                     <label for="message-text" hidden>Message</label>
-                                    <textarea class="form-control border-theme-color" name="message" id="message-text"
-                                        rows="4" placeholder="*{{footer.message-box.email-content}}"
-                                        required></textarea>
+                                    <textarea class="form-control border-theme-color" name="message" id="message-text" rows="4" placeholder="*{{footer.message-box.email-content}}" required></textarea>
                                 </div>
                                 <div class="form-row justify-content-center justify-content-md-end my-2">
                                     <div class="col-4">
-                                        <button type="submit"
-                                            class="form-control btn btn-outline-theme-color btn-sm">{{footer.message-box.send}}</button>
+                                        <button type="submit" class="form-control btn btn-outline-theme-color btn-sm">{{footer.message-box.send}}</button>
                                     </div>
                                 </div>
                             </form>
@@ -137,8 +126,7 @@
     </div>
 </div>
 
-<button type="button" class="btn btn-outline-theme-color d-none d-lg-inline" id="back-to-top"><i
-        class="fas fa-arrow-up"></i></button>
+<button type="button" class="btn btn-outline-theme-color d-none d-lg-inline" id="back-to-top"><i class="fas fa-arrow-up"></i></button>
 
 </body>
 

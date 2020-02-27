@@ -1,1 +1,14 @@
-{}
+{
+    "title": "CONTACT",
+    "office": "TORONTO OFFICE",
+    "message": "MESSAGE",
+    "message-1": "Please send us a message if you have any question,",
+    "message-2": "We will reply within 2 business days.",
+    "message-box": {
+        "sender-name": "Your Name",
+        "sender-email": "Your Email",
+        "email-subject": "Subject",
+        "email-content": "Please input your message",
+        "send": "SEND"
+    }
+}
