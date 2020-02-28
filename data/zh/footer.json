@@ -1,0 +1,20 @@
+{
+    "home": "首页",
+    "about": "关于我们",
+    "downloads": "文件下载",
+    "questions": "常见问题",
+    "contact": "联系我们",
+    "wechat": "微信",
+    "email-us": "联系我们",
+    "message-box": {
+        "option-1": "方式1：发邮件给我们",
+        "send-to": "请发邮件至: ",
+        "reply": "我们会在两个工作日内回复您。",
+        "option-2": "方式2：使用下面的消息表格",
+        "sender-name": "您的名字",
+        "sender-email": "您的邮箱",
+        "email-subject": "标题",
+        "email-content": "请输入您的消息内容",
+        "send": "发送"
+    }
+}

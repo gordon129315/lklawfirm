@@ -1,0 +1,14 @@
+{
+    "title": "联系我们",
+    "office": "多伦多办公室",
+    "message": "MESSAGE",
+    "message-1": "Please send us a message if you have any question,",
+    "message-2": "We will reply within 2 business days.",
+    "message-box": {
+        "sender-name": "您的名字",
+        "sender-email": "您的邮箱",
+        "email-subject": "标题",
+        "email-content": "请输入您的消息内容",
+        "send": "发送"
+    }
+}

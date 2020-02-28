@@ -39,7 +39,6 @@ app.use("", (req, res, next) => {
     } else if (req.headers["accept-language"].startsWith("zh")) {
         req.lang = "zh";
     } else {
-        // res.cookie("lang", "en", { maxAge: 86400000, httpOnly: true });
         req.lang = "en";
     }
 
